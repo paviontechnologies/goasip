@@ -26,6 +26,9 @@ app.use(express.json());
 // Attach io to express app to use in routers
 app.set('io', io);
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 // API Routing
 app.use('/api/auth', authRouter);
 app.use('/api/stores', storesRouter);
@@ -33,9 +36,18 @@ app.use('/api/orders', ordersRouter);
 app.use('/api/tracking', trackingRouter);
 app.use('/api/admin', adminRouter);
 
-// Basic health check route
-app.get('/health', (req, res) => {
-  res.json({ status: "healthy", time: new Date() });
+// Serve frontend build static files
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendDistPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendDistPath));
+
+// Catch-all route to serve React's index.html for clientside routing
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
+  res.sendFile(path.join(frontendDistPath, 'index.html'));
 });
 
 // --- REAL-TIME SOCKETS & SIMULATION ---

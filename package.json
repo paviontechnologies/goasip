@@ -1,0 +1,14 @@
+{
+  "name": "goasip-monorepo",
+  "version": "1.0.0",
+  "description": "Unified monorepo setup for GoaSip platform",
+  "type": "module",
+  "scripts": {
+    "install:backend": "npm --prefix backend install",
+    "install:frontend": "npm --prefix frontend install --legacy-peer-deps",
+    "build:frontend": "npm --prefix frontend run build",
+    "install-all": "npm run install:backend && npm run install:frontend",
+    "build": "npm run build:frontend",
+    "start": "node backend/server.js"
+  }
+}
