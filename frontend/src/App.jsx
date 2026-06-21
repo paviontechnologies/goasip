@@ -10,7 +10,8 @@ import {
   DollarSign, Truck, Store, Settings, LogOut, Check, ArrowRight
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+const API_BASE = `${API_URL}/api`;
 let socket;
 
 // Popular Goan Addresses with Coordinates (North vs South)
@@ -65,7 +66,7 @@ export default function App() {
 
   // Socket Connection & Real-time Listeners
   useEffect(() => {
-    socket = io('http://localhost:5001');
+    socket = io(API_URL);
 
     socket.on('connect', () => {
       console.log("[SOCKET] Connected to backend simulation server");
