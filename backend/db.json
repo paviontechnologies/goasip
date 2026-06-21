@@ -1,0 +1,227 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "phone": "+919999999999",
+      "name": "Super Admin",
+      "email": "admin@goasip.com",
+      "role": "admin",
+      "dob": "1990-01-01",
+      "isVerified": true
+    },
+    {
+      "id": "u-vendor1",
+      "phone": "+918888888888",
+      "name": "Panaji Liquor Owner",
+      "email": "vendor@panajiliquor.com",
+      "role": "vendor",
+      "storeId": "s-panaji",
+      "dob": "1985-05-15",
+      "isVerified": true
+    },
+    {
+      "id": "u-driver1",
+      "phone": "+917777777777",
+      "name": "Ramesh Kumar",
+      "email": "ramesh@goasip.com",
+      "role": "driver",
+      "dob": "1995-08-20",
+      "isVerified": true
+    },
+    {
+      "id": "u-customer1",
+      "phone": "+919876543210",
+      "name": "Varun Mehta",
+      "email": "varun@gmail.com",
+      "role": "customer",
+      "dob": "2000-10-12",
+      "isVerified": true,
+      "kyc": {
+        "status": "verified",
+        "documentType": "Aadhaar",
+        "documentNumber": "XXXX-XXXX-8921"
+      }
+    }
+  ],
+  "stores": [
+    {
+      "id": "s-panaji",
+      "name": "Panaji Spirits Palace",
+      "image": "/images/stores/spirits_palace.jpg",
+      "rating": 4.8,
+      "reviewsCount": 240,
+      "address": "MG Road, Altinho, Panaji, Goa 403001",
+      "location": {
+        "lat": 15.4912,
+        "lng": 73.8264
+      },
+      "isActive": true,
+      "featured": true
+    },
+    {
+      "id": "s-calangute",
+      "name": "Calangute Nectar Boutique",
+      "image": "/images/stores/nectar_boutique.jpg",
+      "rating": 4.6,
+      "reviewsCount": 180,
+      "address": "Calangute-Baga Road, Near Tito's Lane, Calangute 403516",
+      "location": {
+        "lat": 15.5448,
+        "lng": 73.7628
+      },
+      "isActive": true,
+      "featured": true
+    },
+    {
+      "id": "s-mapusa",
+      "name": "Mapusa Cheers Hub",
+      "image": "/images/stores/cheers_hub.jpg",
+      "rating": 4.4,
+      "reviewsCount": 95,
+      "address": "Near Mapusa Market, Mapusa 403507",
+      "location": {
+        "lat": 15.5908,
+        "lng": 73.8113
+      },
+      "isActive": true,
+      "featured": false
+    },
+    {
+      "id": "s-anjuna",
+      "name": "Anjuna Brews & Cellars",
+      "image": "/images/stores/brews_cellars.jpg",
+      "rating": 4.7,
+      "reviewsCount": 150,
+      "address": "Starco Junction, Anjuna 403509",
+      "location": {
+        "lat": 15.5786,
+        "lng": 73.7431
+      },
+      "isActive": true,
+      "featured": false
+    }
+  ],
+  "products": [
+    {
+      "id": "p-1",
+      "storeId": "s-panaji",
+      "name": "Single Malt Scotch Whisky 12 Years",
+      "category": "Whisky",
+      "price": 4200,
+      "stock": 15,
+      "description": "Rich fruit, vanilla, and sweet wood notes, matured in American and European oak casks.",
+      "image": "whisky",
+      "rating": 4.9,
+      "isAvailable": true
+    },
+    {
+      "id": "p-2",
+      "storeId": "s-panaji",
+      "name": "Premium Goa Feni (Cashew)",
+      "category": "Local Spirits",
+      "price": 850,
+      "stock": 30,
+      "description": "Traditional double-distilled cashew juice feni, handcrafted in Valpoi. Rich Goa heritage.",
+      "image": "feni",
+      "rating": 4.7,
+      "isAvailable": true
+    },
+    {
+      "id": "p-3",
+      "storeId": "s-panaji",
+      "name": "Craft Botanical Gin",
+      "category": "Gin",
+      "price": 2800,
+      "stock": 10,
+      "description": "Infused with local Goan spices including green cardamom, coriander seeds, and fresh orange peel.",
+      "image": "gin",
+      "rating": 4.8,
+      "isAvailable": true
+    },
+    {
+      "id": "p-4",
+      "storeId": "s-calangute",
+      "name": "Ultra Premium Vodka",
+      "category": "Vodka",
+      "price": 3100,
+      "stock": 18,
+      "description": "Distilled five times from wheat grown in high plains, resulting in a crisp, clean finish.",
+      "image": "vodka",
+      "rating": 4.5,
+      "isAvailable": true
+    },
+    {
+      "id": "p-5",
+      "storeId": "s-calangute",
+      "name": "Aged Spiced Rum",
+      "category": "Rum",
+      "price": 1200,
+      "stock": 25,
+      "description": "Dark Caribbean rum aged in charred oak barrels, blended with natural vanilla, cinnamon, and nutmeg.",
+      "image": "rum",
+      "rating": 4.6,
+      "isAvailable": true
+    },
+    {
+      "id": "p-6",
+      "storeId": "s-calangute",
+      "name": "Goan IPA Craft Beer (6-Pack)",
+      "category": "Beer",
+      "price": 950,
+      "stock": 40,
+      "description": "Hoppy and refreshing, with citrus and tropical fruit notes. Brewed locally in North Goa.",
+      "image": "beer",
+      "rating": 4.9,
+      "isAvailable": true
+    },
+    {
+      "id": "p-7",
+      "storeId": "s-mapusa",
+      "name": "Cabernet Sauvignon Dry Red Wine",
+      "category": "Wine",
+      "price": 1850,
+      "stock": 12,
+      "description": "Full-bodied dry red wine with flavors of dark berries, plum, and a hint of vanilla oak.",
+      "image": "wine",
+      "rating": 4.4,
+      "isAvailable": true
+    },
+    {
+      "id": "p-8",
+      "storeId": "s-anjuna",
+      "name": "Premium Goan Cashew Feni (Aged)",
+      "category": "Local Spirits",
+      "price": 1400,
+      "stock": 20,
+      "description": "Cashew feni aged for 3 years in oak barrels, giving it a golden hue and smoother finish.",
+      "image": "feni",
+      "rating": 4.9,
+      "isAvailable": true
+    }
+  ],
+  "orders": [],
+  "drivers": [
+    {
+      "id": "d-1",
+      "name": "Ramesh Kumar",
+      "phone": "+917777777777",
+      "status": "online",
+      "currentLocation": {
+        "lat": 15.495,
+        "lng": 73.82
+      },
+      "walletBalance": 450
+    },
+    {
+      "id": "d-2",
+      "name": "Amit Naik",
+      "phone": "+917777777788",
+      "status": "online",
+      "currentLocation": {
+        "lat": 15.54,
+        "lng": 73.76
+      },
+      "walletBalance": 120
+    }
+  ]
+}

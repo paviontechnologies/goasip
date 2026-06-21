@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #fbf5e6;
+  --color-gold-200: #f5e4bd;
+  --color-gold-300: #eed08d;
+  --color-gold-400: #e5b95d;
+  --color-gold-500: #d49a2e; /* Brand Primary Gold */
+  --color-gold-600: #b97d22;
+  --color-gold-700: #965f1c;
+  --color-gold-800: #764819;
+  --color-gold-900: #5d3917;
+  --color-gold-950: #3c210d;
+
+  --color-dark-bg: #0b0b0d;
+  --color-dark-card: #13131a;
+  --color-dark-surface: #181822;
+  --color-dark-border: #252533;
+  --color-dark-text-muted: #8e8e9f;
+
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+:root {
+  color-scheme: dark;
+  scrollbar-color: #d49a2e #13131a;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c24;
+  border: 2px solid #0b0b0d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d49a2e;
+}
+
+body {
+  background-color: #0b0b0d;
+  color: #f3f4f6;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Leaflet Map overrides for premium Dark Theme compatibility */
+.leaflet-container {
+  background: #13131a !important;
+  font-family: inherit;
+}
+
+.leaflet-bar {
+  border: 1px solid #252533 !important;
+  box-shadow: none !important;
+}
+
+.leaflet-bar a {
+  background-color: #181822 !important;
+  color: #eed08d !important;
+  border-bottom: 1px solid #252533 !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #d49a2e !important;
+  color: #0b0b0d !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #181822 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #d49a2e !important;
+  border-radius: 8px !important;
+}
+
+.leaflet-popup-tip {
+  background: #181822 !important;
+  border-left: 1px solid #d49a2e !important;
+  border-bottom: 1px solid #d49a2e !important;
+}
+
+/* Premium Gold Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f5e4bd 0%, #d49a2e 50%, #965f1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Micro-animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(212, 154, 46, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 154, 46, 0.8);
+  }
+}
+
+.glow-btn {
+  animation: pulseGlow 3s infinite;
+}
+
+.glow-btn:hover {
+  animation: none;
+  box-shadow: 0 0 25px rgba(212, 154, 46, 1);
+}
