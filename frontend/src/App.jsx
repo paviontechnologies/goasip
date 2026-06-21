@@ -10,7 +10,7 @@ import {
   DollarSign, Truck, Store, Settings, LogOut, Check, ArrowRight
 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 const API_BASE = `${API_URL}/api`;
 let socket;
 
